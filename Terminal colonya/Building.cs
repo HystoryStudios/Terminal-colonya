@@ -12,5 +12,11 @@ namespace Terminal_Colonya
         public string? Description { get; set; }
 
     }
+    public class House : Building
+    {
+        new public string Name = "House";
+        new public string Description = "For Heberging Colon";
+        public int Bed = 3;
+    }
 
 }
