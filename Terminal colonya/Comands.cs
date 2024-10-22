@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Terminal_colonya;
 
 
 namespace Terminal_Colonya
@@ -16,12 +17,12 @@ namespace Terminal_Colonya
             string commande;
             commande = command;
             string[] partiesCommande = commande.Split(' ');
-            
+
             string? type = partiesCommande[0];
             string? name = partiesCommande[1];
-            
 
-            if (type == "Game") 
+
+            if (type == "Game")
             {
                 switch (name)
                 {
@@ -37,10 +38,11 @@ namespace Terminal_Colonya
                         Console.WriteLine("§ list");
                         Console.WriteLine("§ info [Colon Name]");
                         Console.WriteLine("§ action");
-                        
                         break;
+
+                    
                     default:
-                        Console.WriteLine("Please enter a correct command ! take Help"); 
+                        Console.WriteLine("Please enter a correct command ! take Help");
                         break;
                 }
             }
@@ -62,12 +64,12 @@ namespace Terminal_Colonya
             {
                 switch (name)
                 {
-                   
+
                     case "_":
                         Console.WriteLine("Terminal colonya works with commands ");
                         Console.WriteLine("Type Name Value");
                         break;
-                        
+
                     default:
                         Console.WriteLine("Please enter a correct command ! take Help");
                         break;
@@ -85,7 +87,7 @@ namespace Terminal_Colonya
             string? type = partiesCommande[0];
             string? name = partiesCommande[1];
             string? value = partiesCommande[2];
-            
+
 
             if (type == "Colon")
             {
@@ -93,7 +95,7 @@ namespace Terminal_Colonya
                 {
 
                     case "count":
-                        
+
                         break;
 
                     default:
@@ -104,5 +106,35 @@ namespace Terminal_Colonya
 
         }
 
+        public static void Command_Day(string command)
+        {
+
+            string commande;
+            commande = command;
+            string[] partiesCommande = commande.Split(' ');
+
+            string? type = partiesCommande[0];
+            string? name = partiesCommande[1];
+
+            if (type == "Day")
+            {
+                switch (name)
+                {
+
+                    case "get":
+                        Console.WriteLine("You are " + "day");
+                        break;
+                    case "end":
+                       
+                        
+
+                    default:
+                        Console.WriteLine("Please enter a correct command ! take Help");
+                        break;
+                }
+            }
+
+
+        }
     }
 }

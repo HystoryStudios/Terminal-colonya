@@ -20,14 +20,39 @@ namespace Game
             
             string? playerenter;
             Console.Title = "Terminal Colonya";
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("--Welcome to Terminal Colonya--");
+            
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("--Welcome ");
             Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("to ");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Terminal ");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Colonya--");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("  --Created ");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("by ");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Kotama");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("_Chio--\n");
+            Console.ResetColor();
+
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.Write("T");
                 Console.ForegroundColor = ConsoleColor.Green;  
                 Console.BackgroundColor = ConsoleColor.Black;  
-                Console.WriteLine("TC : "); 
+                Console.WriteLine("C : "); 
                 playerenter = Console.ReadLine();
                 Comands.Command_Game(playerenter);
                 Comands.Command_Help(playerenter);

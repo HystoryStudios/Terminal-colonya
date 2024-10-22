@@ -32,6 +32,7 @@ namespace Terminal_Colonya
     
         public class Colonie
         {
+        
             public List<Colon> colons = new List<Colon>();
             static void GetName()
             { 
