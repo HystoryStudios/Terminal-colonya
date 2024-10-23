@@ -27,6 +27,7 @@ namespace Terminal_colonya.TC_Core
                 switch (name)
                 {
                     case "credit":
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
                         Console.WriteLine("--A game created by--");
                         Console.WriteLine("-----Kotama_chio-----");
                         Console.WriteLine("---------Or----------");
@@ -34,6 +35,7 @@ namespace Terminal_colonya.TC_Core
                         break;
 
                     case "command_list":
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
                         Console.WriteLine("----Colon----");
                         Console.WriteLine("§ list");
                         Console.WriteLine("§ info [Colon Name]");
@@ -42,7 +44,8 @@ namespace Terminal_colonya.TC_Core
 
 
                     default:
-                        Console.WriteLine("Please enter a correct command ! take Help");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Please enter a correct command ! or take Help");
                         break;
                 }
             }
@@ -71,7 +74,8 @@ namespace Terminal_colonya.TC_Core
                         break;
 
                     default:
-                        Console.WriteLine("Please enter a correct command ! take Help");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Please enter a correct command ! or take Help");
                         break;
                 }
             }
@@ -99,7 +103,8 @@ namespace Terminal_colonya.TC_Core
                         break;
 
                     default:
-                        Console.WriteLine("Please enter a correct command ! take Help");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Please enter a correct command ! or take Help");
                         break;
                 }
             }

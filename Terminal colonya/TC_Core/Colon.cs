@@ -19,6 +19,11 @@ namespace Terminal_colonya.TC_Core
         }
 
 
+        public class Colon_AI
+        {
+
+        }
+
 
         public Colon(int age, string name, string sexe)
         {
