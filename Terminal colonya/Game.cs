@@ -6,17 +6,21 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Terminal_colonya.TC_Core;
+using Hystory_Open_Technologie_Terminal_User_Interface;
+
 
 
 // Terminal Colonya is a Open-Source Colony game 
 // Terminal Colonya is a H.O.T (Hystory-Open-Technologie)
-// Terminal Colonya created by Kotama_chio 
+// Terminal Colonya was created by Kotama_chio 
 
 namespace Game
 {
+    
     internal class Game
     {
-
+        
+        
         static void Main(string[] args)
         {
             
