@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Terminal_colonya;
 
 
-namespace Terminal_Colonya
+namespace Terminal_colonya.TC_Core
 {
     public class Comands
     {
@@ -40,7 +40,7 @@ namespace Terminal_Colonya
                         Console.WriteLine("§ action");
                         break;
 
-                    
+
                     default:
                         Console.WriteLine("Please enter a correct command ! take Help");
                         break;
@@ -125,8 +125,8 @@ namespace Terminal_Colonya
                         Console.WriteLine("You are " + "day");
                         break;
                     case "end":
-                       
-                        
+
+
 
                     default:
                         Console.WriteLine("Please enter a correct command ! take Help");

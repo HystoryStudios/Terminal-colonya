@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Terminal_Colonya ; 
+using Terminal_colonya.TC_Core;
+
 
 // Terminal Colonya is a Open-Source Colony game 
 // Terminal Colonya is a H.O.T (Hystory-Open-Technologie)
@@ -20,7 +22,6 @@ namespace Game
             
             string? playerenter;
             Console.Title = "Terminal Colonya";
-            
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("--Welcome ");
             Console.ResetColor();
@@ -45,14 +46,16 @@ namespace Game
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("_Chio--\n");
             Console.ResetColor();
-
+            
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("§ ");
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.Write("T");
                 Console.ForegroundColor = ConsoleColor.Green;  
                 Console.BackgroundColor = ConsoleColor.Black;  
-                Console.WriteLine("C : "); 
+                Console.Write("C : "); 
                 playerenter = Console.ReadLine();
                 Comands.Command_Game(playerenter);
                 Comands.Command_Help(playerenter);

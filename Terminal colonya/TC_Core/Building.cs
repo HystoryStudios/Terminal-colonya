@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Terminal_Colonya
+namespace Terminal_colonya.TC_Core
 {
     public class Building
     {
