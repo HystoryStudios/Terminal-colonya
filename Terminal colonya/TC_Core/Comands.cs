@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terminal_colonya;
-
+using Hystory_Open_Technologie_Terminal_User_Interface;
 
 namespace Terminal_colonya.TC_Core
 {
     public class Comands
     {
+        
         public static void Command_Game(string command)
         {
 
@@ -20,7 +21,7 @@ namespace Terminal_colonya.TC_Core
 
             string? type = partiesCommande[0];
             string? name = partiesCommande[1];
-
+            var ColorBack = Hystory_Open_Technologie_Terminal_User_Interface.UI.Color_Whrite_Back;
 
             if (type == "Game")
             {
@@ -41,7 +42,15 @@ namespace Terminal_colonya.TC_Core
                         Console.WriteLine("§ info [Colon Name]");
                         Console.WriteLine("§ action");
                         break;
-
+                    case "Celeste":
+                        ColorBack(ConsoleColor.Yellow, ConsoleColor.Yellow,  "                    \n");
+                        ColorBack(ConsoleColor.White, ConsoleColor.White,    "                    \n");
+                        ColorBack(ConsoleColor.Magenta, ConsoleColor.Magenta,"                    \n");
+                        ColorBack(ConsoleColor.Black, ConsoleColor.Black,    "                    \n");
+                        ColorBack(ConsoleColor.White, ConsoleColor.Black, "Easter egg : I'm Non-binary!!!and my name is Celeste!!!\n");
+                        
+                        break;
+                        
 
                     default:
                         Console.ForegroundColor = ConsoleColor.DarkRed;

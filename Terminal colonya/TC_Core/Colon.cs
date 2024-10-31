@@ -54,6 +54,7 @@ namespace Terminal_colonya.TC_Core
             colon.Age = random.Next(1, 100);
             colon.Sexe = "N";
             colons.Add(colon);
+            
         }
 
     }

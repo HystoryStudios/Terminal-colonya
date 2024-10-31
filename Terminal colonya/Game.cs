@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terminal_colonya.TC_Core;
 using Hystory_Open_Technologie_Terminal_User_Interface;
+using System.Drawing;
 
 
 
@@ -20,46 +21,38 @@ namespace Game
     internal class Game
     {
         
-        
         static void Main(string[] args)
         {
-            
             string? playerenter;
+            int width = 1080, height = 1920;
+            var ColorLine = Hystory_Open_Technologie_Terminal_User_Interface.UI.Color_Whrite_line;
+            Console.SetWindowSize(width, height);
             Console.Title = "Terminal Colonya";
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("--Welcome ");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("to ");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("Terminal ");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("Colonya--");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("  --Created ");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("by ");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("Kotama");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("_Chio--\n");
-            Console.ResetColor();
+
+
+            ColorLine(ConsoleColor.Red, "--Welcome ");
+            ColorLine(ConsoleColor.DarkYellow, "to ");
+            ColorLine(ConsoleColor.Yellow, "Terminal ");
+            ColorLine(ConsoleColor.Green, "Colonya--\n");
+            ColorLine(ConsoleColor.DarkBlue, "  --Created ");
+            ColorLine(ConsoleColor.Magenta, "by ");
+            ColorLine(ConsoleColor.White, "Kotama");
+            ColorLine(ConsoleColor.Blue, "_Chio--\n");
+
             
+
+
+
             while (true)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write("§ ");
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-                Console.Write("T");
-                Console.ForegroundColor = ConsoleColor.Green;  
-                Console.BackgroundColor = ConsoleColor.Black;  
-                Console.Write("C : "); 
+                
+                ColorLine(ConsoleColor.Yellow, "§ ");
+                ColorLine(ConsoleColor.White, "T");
+                ColorLine(ConsoleColor.Magenta,"C ");
+                Console.BackgroundColor = ConsoleColor.White;
+                ColorLine(ConsoleColor.Black, ": ");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Green;
                 playerenter = Console.ReadLine();
                 Comands.Command_Game(playerenter);
                 Comands.Command_Help(playerenter);
