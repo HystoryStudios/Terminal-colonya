@@ -9,6 +9,7 @@ namespace Hystory_Open_Technologie_Terminal_User_Interface
 {
     public class UI
     {
+         
             public static void Color_Whrite_line(ConsoleColor Color, string Text)
             {
                 Console.ForegroundColor = Color;
@@ -20,5 +21,22 @@ namespace Hystory_Open_Technologie_Terminal_User_Interface
                 Console.ForegroundColor = Color;
                 Console.Write(Text);
             }
+            public static void Button(string Button_Name)
+            {
+                var cursor = Console.GetCursorPosition;
+                
+            }
+        public class Window
+        {
+            public string? WindowName;
+            public Window(string? WindowName)
+            {
+                this.WindowName = WindowName;
+                Console.Clear();
+                Color_Whrite_Back(ConsoleColor.White, ConsoleColor.Black, "------------------------------------" + WindowName + "------------------------------------\n");
+
+            }
+            
+        }
     }
 }

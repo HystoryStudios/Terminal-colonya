@@ -9,9 +9,10 @@ namespace Terminal_colonya.TC_Core
 {
     public class Day_system
     {
-        public Day_system() 
+        public int Day = 0;
+        public Day_system(int day) 
         {
-
+            Day = day;
         }
     }
     public class World

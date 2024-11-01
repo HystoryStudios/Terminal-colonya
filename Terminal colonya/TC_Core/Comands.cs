@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Terminal_colonya;
 using Hystory_Open_Technologie_Terminal_User_Interface;
+using System.Globalization;
+using System.Security.Principal;
 
 namespace Terminal_colonya.TC_Core
 {
@@ -14,7 +16,7 @@ namespace Terminal_colonya.TC_Core
         
         public static void Command_Game(string command)
         {
-
+            
             string commande;
             commande = command;
             string[] partiesCommande = commande.Split(' ');
@@ -27,6 +29,9 @@ namespace Terminal_colonya.TC_Core
             {
                 switch (name)
                 {
+                    case "test":
+                        Hystory_Open_Technologie_Terminal_User_Interface.UI.Window window = new Hystory_Open_Technologie_Terminal_User_Interface.UI.Window("test");
+                        break;
                     case "credit":
                         Console.ForegroundColor = ConsoleColor.DarkBlue;
                         Console.WriteLine("--A game created by--");
