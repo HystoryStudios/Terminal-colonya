@@ -34,7 +34,6 @@ namespace Hystory_Open_Technologie_Terminal_User_Interface
                 this.WindowName = WindowName;
                 Console.Clear();
                 Color_Whrite_Back(ConsoleColor.White, ConsoleColor.Black, "------------------------------------" + WindowName + "------------------------------------\n");
-
             }
             
         }

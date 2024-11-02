@@ -11,8 +11,15 @@ namespace Terminal_colonya.TC_Core
         public string Name { get; set; }
         public int Age { get; set; }
         public string Sexe { get; set; }
+        private string Humeur { get; set; }
 
-
+        public class Colon_Humeur
+        {
+            public static void Happy()
+            {
+                
+            }
+        }
         public class Colon_Member
         {
 
@@ -25,11 +32,12 @@ namespace Terminal_colonya.TC_Core
         }
 
 
-        public Colon(int age, string name, string sexe)
+        public Colon(int age, string name, string sexe, string humeur)
         {
             Name = name;
             Age = age;
             Sexe = sexe;
+            Humeur = humeur;
         }
 
     }
@@ -41,9 +49,7 @@ namespace Terminal_colonya.TC_Core
         public List<Colon> colons = new List<Colon>();
         static void GetName()
         {
-
-
-
+            
         }
 
 
