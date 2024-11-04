@@ -112,7 +112,7 @@ namespace Terminal_colonya.TC_Core
                 switch (name)
                 {
 
-                    case "count":
+                    case "":
 
                         break;
 

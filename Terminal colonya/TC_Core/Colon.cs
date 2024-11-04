@@ -10,7 +10,7 @@ namespace Terminal_colonya.TC_Core
 
         public string Name { get; set; }
         public int Age { get; set; }
-        public string Sexe { get; set; }
+        public char Sexe { get; set; }
         private string Humeur { get; set; }
 
         public class Colon_Humeur
@@ -32,7 +32,7 @@ namespace Terminal_colonya.TC_Core
         }
 
 
-        public Colon(int age, string name, string sexe, string humeur)
+        public Colon(int age, string name, char sexe, string humeur)
         {
             Name = name;
             Age = age;
@@ -53,12 +53,9 @@ namespace Terminal_colonya.TC_Core
         }
 
 
-        public void AddColon(Colon colon)
+        public void AddColon(string name, int age, char gender)
         {
-            Random random = new Random();
-            colon.Name = "Celeste";
-            colon.Age = random.Next(1, 100);
-            colon.Sexe = "N";
+            Colon colon = new Colon(age, name, gender, "");
             colons.Add(colon);
             
         }
