@@ -32,12 +32,12 @@ namespace Terminal_colonya.TC_Core
         }
 
 
-        public Colon(int age, string name, char sexe, string humeur)
+        public Colon(int age, string name, char sexe)
         {
             Name = name;
             Age = age;
             Sexe = sexe;
-            Humeur = humeur;
+            
         }
 
     }
@@ -47,18 +47,15 @@ namespace Terminal_colonya.TC_Core
     {
 
         public List<Colon> colons = new List<Colon>();
-        static void GetName()
-        {
-            
-        }
-
 
         public void AddColon(string name, int age, char gender)
         {
-            Colon colon = new Colon(age, name, gender, "");
-            colons.Add(colon);
             
+            Colon colon = new Colon(age, name, gender);
+            colons.Add(colon); 
         }
+
+        
 
     }
 }

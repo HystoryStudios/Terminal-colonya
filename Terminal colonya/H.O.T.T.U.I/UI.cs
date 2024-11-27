@@ -25,6 +25,7 @@ namespace Hystory_Open_Technologie_Terminal_User_Interface
             {
                 var cursor = Console.GetCursorPosition;
                 
+                
             }
         public class Window
         {

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Terminal_colonya.TC_Core;
 using Hystory_Open_Technologie_Terminal_User_Interface;
 using System.Drawing;
+using System.Reflection;
 
 
 
@@ -28,7 +29,7 @@ namespace Game
             var ColorLine = Hystory_Open_Technologie_Terminal_User_Interface.UI.Color_Whrite_line;
             Console.SetWindowSize(width, height);
             Console.Title = "Terminal Colonya";
-
+            
 
             ColorLine(ConsoleColor.Red, "--Welcome ");
             ColorLine(ConsoleColor.DarkYellow, "to ");
@@ -38,7 +39,9 @@ namespace Game
             ColorLine(ConsoleColor.Magenta, "by ");
             ColorLine(ConsoleColor.White, "Kotama");
             ColorLine(ConsoleColor.Blue, "_Chio--\n");
-
+            
+            
+            
             
 
 
@@ -57,6 +60,8 @@ namespace Game
                 Comands.Command_Game(playerenter);
                 Comands.Command_Help(playerenter);
                 Comands.Command_Colon(playerenter);
+                
+                
                 
             }
             
