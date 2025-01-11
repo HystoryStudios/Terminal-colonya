@@ -1,22 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Hystory_Open_Technology_Terminal_User_Interface;
 
 namespace Terminal_colonya.TC_Core
 {
-    public class Building
+    public class Build_system
     {
-        public string? Name { get; set; }
-        public string? Description { get; set; }
+        private List<Build> builds = new List<Build>();
 
-    }
-    public class House : Building
-    {
-        new public string Name = "House";
-        new public string Description = "For Heberging Colon";
-        public int Bed = 3;
-    }
+        public Build_system()
+        {
+            builds = new List<Build>();
+        }
+        public void Add(Build build)
+        {
+            builds.Add(build);
+        }
 
+        public class Build
+        {
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public int Number { get; set; }
+
+            public Build(string name, string description, int number)
+            {
+                Name = name;
+                Description = description;
+                Number = number;
+            }
+            public void Print_info(Build build)
+            {
+                Tools.Horizontal_Line(Console.WindowWidth, ConsoleColor.Red, '-');
+                Tools.Color_Write(ConsoleColor.Green, $"| Name : {build.Name}");
+                Tools.Color_Write(ConsoleColor.Green, $"| Utilityes : {build.Description}");
+                Tools.Color_Write(ConsoleColor.Green, $"| Number : {build.Number}");
+                Tools.Horizontal_Line(Console.WindowWidth, ConsoleColor.Red, '-');
+            }
+        }
+        public class Bed_Room : Build
+        {
+            public string Name = "Bed_Room";
+            public string Description = "For Do good dream";
+            public int Number = 0;
+            public Bed_Room(string name, string description, int number) : base(name, description, number)
+            {
+                Name = name;
+                Description = description;
+                Number = number;
+            }
+            
+        }
+    }
 }

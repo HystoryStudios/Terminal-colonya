@@ -11,17 +11,13 @@ namespace Terminal_colonya.TC_Core
     
     public class World
     {
-        
 
-        
+        public static readonly int[,] world;
 
-        
-        
-        
-        public static readonly int[,] world =
+        public void GenerateWorld()
         {
-            {}
-        };
+            
+        }
 
         public World()
         {

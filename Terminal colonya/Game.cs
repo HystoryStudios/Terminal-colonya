@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Terminal_colonya.TC_Core;
-using Hystory_Open_Technologie_Terminal_User_Interface;
+using Hystory_Open_Technology_Terminal_User_Interface;
 using System.Drawing;
 using System.Reflection;
 
@@ -21,12 +21,11 @@ namespace Game
     
     internal class Game
     {
-        
         static void Main(string[] args)
         {
             string? playerenter;
             int width = 1080, height = 1920;
-            var ColorLine = Hystory_Open_Technologie_Terminal_User_Interface.UI.Color_Whrite_line;
+            var ColorLine = Tools.Color_Write;
             Console.SetWindowSize(width, height);
             Console.Title = "Terminal Colonya";
             

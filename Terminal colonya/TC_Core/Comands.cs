@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terminal_colonya;
-using Hystory_Open_Technologie_Terminal_User_Interface;
+using Hystory_Open_Technology_Terminal_User_Interface;
 using System.Globalization;
 using System.Security.Principal;
 
@@ -23,14 +23,13 @@ namespace Terminal_colonya.TC_Core
 
             string? type = partiesCommande[0];
             string? name = partiesCommande[1];
-            var ColorBack = Hystory_Open_Technologie_Terminal_User_Interface.UI.Color_Whrite_Back;
+            var ColorBack = Tools.Color_Write_Back;
 
             if (type == "Game")
             {
                 switch (name)
                 {
                     case "test":
-                        Hystory_Open_Technologie_Terminal_User_Interface.UI.Window window = new Hystory_Open_Technologie_Terminal_User_Interface.UI.Window("test");
                         break;
                     case "credit":
                         Console.ForegroundColor = ConsoleColor.DarkBlue;
