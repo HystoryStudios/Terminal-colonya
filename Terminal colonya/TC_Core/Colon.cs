@@ -59,6 +59,10 @@ namespace Terminal_colonya.TC_Core
 
                 string name = values[0];
                 string sexe = values[1];
+                if (sexe == "m,f")
+                {
+                    sexe = "n";
+                }
                 int age = rd.Next(1, 100);
                 colon.Name = name;
                 colon.Sexe = sexe.ToCharArray()[0];

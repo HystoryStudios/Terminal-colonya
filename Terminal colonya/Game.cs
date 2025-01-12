@@ -28,10 +28,9 @@ namespace Game
             Colonie colonie = new Colonie(colon);
 
             colonie.Genarate_Begin_Colonie();
-
             foreach (Colon c in colon)
             {
-                Console.WriteLine(c.Name);
+                Console.WriteLine((c.Name, c.Sexe, c.Age));
             }
         }       
     }
