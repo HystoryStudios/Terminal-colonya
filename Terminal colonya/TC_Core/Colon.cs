@@ -71,9 +71,7 @@ namespace Terminal_colonya.TC_Core
             {
                 Colon colon = new Colon(0, null, 'n');
                 Generate_colon(colon);
-                Console.WriteLine(colon.Name);
-                Console.WriteLine(colon.Age);
-                Console.WriteLine(colon.Sexe);
+                AddColon(colon.Name, colon.Age, colon.Sexe);
             }
         }
         public Colonie(List<Colon> colons)
