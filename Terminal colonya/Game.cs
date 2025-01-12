@@ -23,7 +23,11 @@ namespace Game
     {
         static void Main(string[] args)
         {
-            
+            Console.OutputEncoding = Encoding.UTF8;
+            List<Colon> colon = new List<Colon>();
+            Colonie colonie = new Colonie(colon);
+
+            colonie.Genarate_Begin_Colonie();
         }       
     }
 }

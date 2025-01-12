@@ -1,6 +1,10 @@
 ﻿using System.ComponentModel;
 using System;
 using System.Collections.Generic;
+using System.Security.Principal;
+using System.Transactions;
+using static Terminal_colonya.TC_Core.Colon;
+using System.Resources;
 
 namespace Terminal_colonya.TC_Core
 {
@@ -37,11 +41,44 @@ namespace Terminal_colonya.TC_Core
     }
     public class Colonie
     {
-        public List<Colon> colons = new List<Colon>();
+        public List<Colon> Colons = new List<Colon>();
         public void AddColon(string name, int age, char gender)
         {
             Colon colon = new Colon(age, name, gender);
-            colons.Add(colon); 
+            Colons.Add(colon); 
+        }
+        public void Generate_colon(Colon colon)
+        {
+            Random rd = new Random();
+            var reader = new StreamReader("C:\\Users\\natsu\\Source\\Repos\\Terminal colonya\\Terminal colonya\\Resources\\Prenoms.csv");
+            int randomname = rd.Next(1, 11628);
+            for (int i = 1; i < randomname; i++)
+            {
+                var line = reader.ReadLine();
+                var values = line.Split(';');
+
+                string name = values[0];
+                string sexe = values[1];
+                int age = rd.Next(1, 100);
+                colon.Name = name;
+                colon.Sexe = sexe.ToCharArray()[0];
+                colon.Age = age;
+            }
+        }
+        public void Genarate_Begin_Colonie()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Colon colon = new Colon(0, null, 'n');
+                Generate_colon(colon);
+                Console.WriteLine(colon.Name);
+                Console.WriteLine(colon.Age);
+                Console.WriteLine(colon.Sexe);
+            }
+        }
+        public Colonie(List<Colon> colons)
+        {
+            Colons = colons;
         }
     }
 }
