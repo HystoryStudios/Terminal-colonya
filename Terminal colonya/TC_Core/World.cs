@@ -23,7 +23,5 @@ namespace Terminal_colonya.TC_Core
         {
             
         }
-
-
     }
 }

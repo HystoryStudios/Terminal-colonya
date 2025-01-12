@@ -22,11 +22,6 @@ namespace Terminal_colonya.TC_Core
             seed = seed / DateAndTime.Now.Second;
             seed = seed % DateAndTime.Now.Millisecond;
             seed = seed * DateAndTime.Now.Hour;
-
-        }
-        public static void GenererNBentre2V(int Minvalue, int Maxvalue)
-        {
-            
         }
     }
 }

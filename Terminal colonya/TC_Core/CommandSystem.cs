@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Terminal_colonya.TC_Core
 {
-    class CommandSystem
+    public class CommandSystem
     {
-        
+        public Dictionary<string, Commands> commands = new Dictionary<string, Commands>();
+    }
+    public class Commands
+    {
+        public Commands() 
+        {
+
+        }
     }
 }

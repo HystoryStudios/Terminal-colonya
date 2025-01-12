@@ -11,7 +11,6 @@ namespace Hystory_Open_Technology_Terminal_User_Interface
 {
     public class Tools
     {
-        
         public static void Color_Write(ConsoleColor Color, string Text)
         {
             Console.ForegroundColor = Color;

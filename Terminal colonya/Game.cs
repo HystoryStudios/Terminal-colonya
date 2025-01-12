@@ -23,48 +23,7 @@ namespace Game
     {
         static void Main(string[] args)
         {
-            string? playerenter;
-            int width = 1080, height = 1920;
-            var ColorLine = Tools.Color_Write;
-            Console.SetWindowSize(width, height);
-            Console.Title = "Terminal Colonya";
             
-
-            ColorLine(ConsoleColor.Red, "--Welcome ");
-            ColorLine(ConsoleColor.DarkYellow, "to ");
-            ColorLine(ConsoleColor.Yellow, "Terminal ");
-            ColorLine(ConsoleColor.Green, "Colonya--\n");
-            ColorLine(ConsoleColor.DarkBlue, "  --Created ");
-            ColorLine(ConsoleColor.Magenta, "by ");
-            ColorLine(ConsoleColor.White, "Kotama");
-            ColorLine(ConsoleColor.Blue, "_Chio--\n");
-            
-            
-            
-            
-
-
-
-            while (true)
-            {
-                
-                ColorLine(ConsoleColor.Yellow, "§ ");
-                ColorLine(ConsoleColor.White, "T");
-                ColorLine(ConsoleColor.Magenta,"C ");
-                Console.BackgroundColor = ConsoleColor.White;
-                ColorLine(ConsoleColor.Black, ": ");
-                Console.BackgroundColor = ConsoleColor.Black;
-                Console.ForegroundColor = ConsoleColor.Green;
-                playerenter = Console.ReadLine();
-                Comands.Command_Game(playerenter);
-                Comands.Command_Help(playerenter);
-                Comands.Command_Colon(playerenter);
-                
-                
-                
-            }
-            
-
         }       
     }
 }
