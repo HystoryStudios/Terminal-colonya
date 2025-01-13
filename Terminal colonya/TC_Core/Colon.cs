@@ -17,12 +17,10 @@ namespace Terminal_colonya.TC_Core
         public char Sexe { get; set; }
         private string Humeur { get; set; }
 
+        
         public class Colon_Humeur
         {
-            public void Happy()
-            {
-                
-            }
+            
         }
         public class Colon_Member
         {
@@ -69,9 +67,9 @@ namespace Terminal_colonya.TC_Core
                 colon.Age = age;
             }
         }
-        public void Genarate_Begin_Colonie()
+        public void Genarate_Begin_Colonie(int number)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < number; i++)
             {
                 Colon colon = new Colon(0, null, 'n');
                 Generate_colon(colon);

@@ -2,10 +2,7 @@
 
 namespace Terminal_colonya.TC_Core
 {
-    public interface IBuild_system
-    {
-        void Build();
-    }
+    
     public class Build 
     {
         public string Name { get; set; }
@@ -32,12 +29,24 @@ namespace Terminal_colonya.TC_Core
         public string Name = "Bed_Room";
         public string Description = "For Do good dream";
         public int Number = 0;
-        public Bed_Room(string name, string description, int number) : base(name, description, number)
+        public Bed_Room(int number) : base(null, null, number)
         {
-            Name = name;
-            Description = description;
             Number = number;
             Print_info(this);
+        }
+    }
+    public class Build_System
+    {
+        public List<Build> Builds = new List<Build>();
+
+        public void Add(Build build)
+        {
+            Builds.Add(build);
+        }
+        
+        public Build_System(List<Build> builds)
+        {
+            Builds = builds;
         }
     }
 }

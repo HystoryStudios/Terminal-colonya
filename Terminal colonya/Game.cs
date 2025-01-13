@@ -27,7 +27,7 @@ namespace Game
             List<Colon> colon = new List<Colon>();
             Colonie colonie = new Colonie(colon);
 
-            colonie.Genarate_Begin_Colonie();
+            colonie.Genarate_Begin_Colonie(3);
             foreach (Colon c in colon)
             {
                 Console.WriteLine((c.Name, c.Sexe, c.Age));
