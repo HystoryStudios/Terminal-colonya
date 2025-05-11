@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Security.Principal;
 using System.Transactions;
-using static Terminal_colonya.TC_Core.Colon;
 using System.Resources;
 
 namespace Terminal_colonya.TC_Core
@@ -17,7 +16,6 @@ namespace Terminal_colonya.TC_Core
         public char Sexe { get; set; }
         private string Humeur { get; set; }
 
-        
         public class Colon_Humeur
         {
             
