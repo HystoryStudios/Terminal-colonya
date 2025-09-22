@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Terminal_colonya.H.O.T.T.U.I
+namespace TC_CORE
 {
-    public class HOTTUI
+    public class GameState
     {
-        public HOTTUI() 
-        {
 
-        }
     }
 }

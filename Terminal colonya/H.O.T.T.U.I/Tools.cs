@@ -12,13 +12,17 @@ namespace HOTTUI
 {
     public class Tools
     {
-        public class Whrite
+        public class Write
         {
             public static void Color_Write(ConsoleColor Color, string Text)
             {
                 Console.ForegroundColor = Color;
                 Console.Write(Text);
                 Console.ResetColor();
+            }
+            public static void WriteLine(string Text)
+            {
+                Console.WriteLine(Text);
             }
             public static void Color_Write_Back(ConsoleColor Color, ConsoleColor BackGround, string Text)
             {
@@ -50,7 +54,7 @@ namespace HOTTUI
         {
             for (int i = 0; i < size; i++)
             {
-                Whrite.Color_Write(color, type.ToString());
+                Write.Color_Write(color, type.ToString());
             }
         }
         public static void Vertical_Line(int size, ConsoleColor color)
@@ -58,7 +62,7 @@ namespace HOTTUI
             //This Fonction is for create a vertical line in the left of the terminal
             for (int i = 0; i < size; i++)
             {
-                Whrite.Color_Write(color, "|\n");
+                Write.Color_Write(color, "|\n");
             }
         }
         public static void Loading_Bar(int size, ConsoleColor color, int DelayTime)
@@ -66,7 +70,7 @@ namespace HOTTUI
             for (int i = 0; i < size; i++)
             {
                 Thread.Sleep(DelayTime);
-                Whrite.Color_Write_Back(color, color, " ");
+                Write.Color_Write_Back(color, color, " ");
             }
         }
         public static int Menu(ConsoleColor color, Dictionary<int, string> choise, string cursor)
@@ -138,7 +142,7 @@ namespace HOTTUI
         }
         public static void PixelArt(ConsoleColor color, string symbol)
         {
-            Whrite.Color_Write(color, symbol);
+            Write.Color_Write(color, symbol);
         }
         
         
@@ -161,7 +165,7 @@ namespace HOTTUI
                 }
                 Console.Clear();
 
-                Whrite.Color_Write(color, "[");
+                Write.Color_Write(color, "[");
 
                 for (int i = 0; i < (value / Length); i++)
                 {
@@ -172,7 +176,7 @@ namespace HOTTUI
                 {
                     Console.Write("-");
                 }
-                Whrite.Color_Write(color, "]");
+                Write.Color_Write(color, "]");
                 Console.Write($" {value}");
             }
 
