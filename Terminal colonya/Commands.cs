@@ -1,7 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.Emit;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.Loader;
 
 namespace TC_CORE
@@ -10,13 +7,13 @@ namespace TC_CORE
     {
         string Name { get; }
         string Description { get; }
-        void Execute(string[] args, GameState gameState);
+        void Execute(string[] args, GameContent gameState);
     }
     public class CommandManager
     {
-        private GameState _state;
+        private GameContent _state;
 
-        public CommandManager(GameState state)
+        public CommandManager(GameContent state)
         {
             _state = state;
         }
@@ -42,7 +39,7 @@ namespace TC_CORE
             }
         }
 
-        public void ExecuteCommand(string input, GameState state)
+        public void ExecuteCommand(string input, GameContent state)
         {
             if (string.IsNullOrWhiteSpace(input)) return;
 

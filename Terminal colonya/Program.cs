@@ -1,9 +1,4 @@
 ﻿using HOTTUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TC_CORE;
 
 namespace Terminal_colonya
@@ -12,7 +7,7 @@ namespace Terminal_colonya
     {
         public static void Main()
         {
-            var gs = new GameState();
+            var gs = new GameContent();
             var cm = new CommandManager(gs);
             Console.WriteLine("Welcome to TC !");
 

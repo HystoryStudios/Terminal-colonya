@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace TC_CORE
 {
-    public class GameState
+    public class Colon
     {
-        public Dictionary<string, ICommand> AvailableCommands { get; } = new();
+
+    }
+    public class ColonManager
+    {
+
     }
 }
