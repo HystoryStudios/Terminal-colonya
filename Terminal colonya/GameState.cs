@@ -8,6 +8,6 @@ namespace TC_CORE
 {
     public class GameState
     {
-
+        public Dictionary<string, ICommand> AvailableCommands { get; } = new();
     }
 }

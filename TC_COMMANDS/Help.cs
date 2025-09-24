@@ -12,6 +12,12 @@ namespace TC_COMMANDS
         public void Execute(string[] args, GameState gameState)
         {
             Tools.Write.WriteLine("Welcome to Terminal Colonya !");
+            Tools.Write.WriteLine("--Availibe Commands--");
+
+            foreach (var cmd in gameState.AvailableCommands.Values)
+            {
+                Console.WriteLine($"/{cmd.Name}: {cmd.Description}");
+            }
         }
     }
 }
