@@ -10,6 +10,7 @@ namespace TC_ZONES
     {
         public string Name => "Planting";
         public string Description => "To EAT !";
+        public int Size => 0;
         public void Execute(GameContent gameState)
         {
 

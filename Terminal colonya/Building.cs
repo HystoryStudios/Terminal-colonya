@@ -6,7 +6,9 @@ namespace TC_CORE
     {
         string Name { get; }
         string Description { get; }
-        void Execute(GameContent gameState);
+        int Size {get;}
+        void Logic(GameContent gameState);
+        void Init(int Size);
     }
     public class BuildingManager
     {

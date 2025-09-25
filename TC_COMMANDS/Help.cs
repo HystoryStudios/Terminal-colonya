@@ -9,14 +9,14 @@ namespace TC_COMMANDS
     {
         public string Name => "help";
         public string Description => "to introduce to TC";
-        public void Execute(string[] args, GameContent gameState)
+        public void Execute(string[] args, GameContent gameContent, GameData gameData)
         {
             Tools.Write.WriteLine("Welcome to Terminal Colonya !");
             Tools.Write.WriteLine("--Available Commands--");
 
-            foreach (var cmd in gameState.AvailableCommands.Values)
+            foreach (var cmd in gameContent.AvailableCommands.Values)
             {
-                Console.WriteLine($"/{cmd.Name}: {cmd.Description}");
+                Console.WriteLine($"|-{cmd.Name}: {cmd.Description}");
             }
         }
     }

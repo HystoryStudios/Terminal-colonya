@@ -9,6 +9,7 @@ namespace Terminal_colonya
         {
             var gs = new GameContent();
             var cm = new CommandManager(gs);
+            var gd = new GameData();
             Console.WriteLine("Welcome to TC !");
 
             string commandsDllPath = Path.Combine(
@@ -26,7 +27,7 @@ namespace Terminal_colonya
                 {
                     break;
                 }
-                cm.ExecuteCommand(UserInput, gs);
+                cm.ExecuteCommand(UserInput, gs, gd);
             }
         }
     }

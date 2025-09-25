@@ -10,7 +10,11 @@ namespace TC_BUILDS
     {
         public string Name => "Chamber";
         public string Description => "To Dream !";
-        public void Execute(GameContent gameState)
+        public int Size => 0;
+        public void Logic(GameContent gameState)
+        {
+        }
+        public void Init(int Size)
         {
 
         }
