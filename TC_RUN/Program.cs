@@ -15,11 +15,11 @@ namespace Terminal_colonya
 
             string commandsDllPath = Path.Combine(
                 Directory.GetCurrentDirectory(),
-                @"TC_Commands.dll"
+                @"TC_COMMANDS.dll"
             );
             string buildsDllPath = Path.Combine(
                 Directory.GetCurrentDirectory(),
-                @"TC_Builds.dll"
+                @"TC_BUILDS.dll"
             );
 
             cm.LoadCommandsFromAssembly(commandsDllPath);

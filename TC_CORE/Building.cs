@@ -1,4 +1,4 @@
-﻿
+﻿    
 
 using System.Reflection;
 
@@ -26,7 +26,7 @@ namespace TC_CORE
                 var assembly = Assembly.LoadFrom(dllPath);
                 foreach (var type in assembly.GetTypes())
                 {
-                    if (typeof(ICommand).IsAssignableFrom(type) && !type.IsInterface)
+                    if (typeof(IBuild).IsAssignableFrom(type) && !type.IsInterface)
                     {
                         var build = (IBuild)Activator.CreateInstance(type);
                         _content.AvailableBuilds[build.Name] = build;

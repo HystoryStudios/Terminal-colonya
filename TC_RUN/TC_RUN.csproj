@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Terminal colonya\TC_CORE.csproj" />
+    <ProjectReference Include="..\TC_CORE\TC_CORE.csproj" />
   </ItemGroup>
 
 </Project>
