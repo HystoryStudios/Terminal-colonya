@@ -9,6 +9,7 @@ namespace Terminal_colonya
         {
             var gs = new GameContent();
             var cm = new CommandManager(gs);
+            var bc = new BuildingManager(gs);
             var gd = new GameData();
             Console.WriteLine("Welcome to TC !");
 
@@ -16,8 +17,13 @@ namespace Terminal_colonya
                 Directory.GetCurrentDirectory(),
                 @"TC_Commands.dll"
             );
-            
+            string buildsDllPath = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                @"TC_Builds.dll"
+            );
+
             cm.LoadCommandsFromAssembly(commandsDllPath);
+            bc.LoadBuildsFromAssembly(buildsDllPath);
 
             while (true)
             {

@@ -1,8 +1,4 @@
-﻿using HOTTUI;
-using System;
-using System.Runtime;
-using System.Windows.Input;
-using TC_CORE;
+﻿using TC_CORE;
 
 namespace TC_BUILDS
 {
@@ -10,13 +6,14 @@ namespace TC_BUILDS
     {
         public string Name => "Chamber";
         public string Description => "To Dream !";
-        public int Size => 0;
-        public void Logic(GameContent gameState)
+        private int Bed = new int();
+        public void Logic(GameContent gameState, GameData gameData)
         {
+            gameData.Bed += Bed;
         }
-        public void Init(int Size)
+        public void Init(string[] args)
         {
-
+            Bed = int.Parse(args[0]);
         }
     }
 }

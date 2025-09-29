@@ -8,10 +8,6 @@ namespace TC_CORE
 {
     public class Colon
     {
-
-    }
-    public class ColonManager
-    {
-
+        
     }
 }

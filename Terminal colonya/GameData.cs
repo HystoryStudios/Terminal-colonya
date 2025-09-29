@@ -10,5 +10,6 @@ namespace TC_CORE
     {
         public List<IBuild> Builds = new List<IBuild>();
         public List<IItem> Items = new List<IItem>();
+        public int Bed = 0;
     }
 }

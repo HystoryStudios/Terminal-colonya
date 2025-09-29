@@ -1,9 +1,4 @@
 ﻿using HOTTUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TC_CORE;
 
 namespace TC_COMMANDS
@@ -22,21 +17,29 @@ namespace TC_COMMANDS
                 Tools.Write.WriteLine("-build delete");
                 Tools.Write.WriteLine("-build list");
             }
-
-            switch (args[0])
+            else
             {
-                case null:
-                    break;
-                case "create":
-                    gameContent.AvailableBuilds.TryGetValue(args[1], out var builds);
-                    gameData.Builds.Add(builds);
-                    break;
-                case "delete":
-                    break;
-                case "list":
-                    break;
-                case "upgrade":
-                    break;
+                switch (args[0])
+                {
+                    case null:
+                        break;
+                    case "create":
+                        gameContent.AvailableBuilds.TryGetValue(args[1], out var build);
+                        gameData.Builds.Add(build);
+                        Tools.Write.WriteLine($"You have create one : {build.Name}");
+                        break;
+                    case "delete":
+                        break;
+                    case "list":
+                        Tools.Write.WriteLine("--Your builds--");
+                        foreach (var building in gameData.Builds)
+                        {
+                            Tools.Write.WriteLine($"|- {building.Name}");
+                        }
+                        break;
+                    case "upgrade":
+                        break;
+                }
             }
         }
     }
