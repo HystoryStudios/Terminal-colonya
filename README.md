@@ -10,7 +10,7 @@ Terminal Colonya is a Open-source Text-based colony game in the OS terminal !
 ## ROAD MAP
 
 - [ ] ALPHA
-    - [ ] IA system
+    - [ ] Colon AI system
     - [x] DLL game content system
     - [x] Modular Command system
     - [x] Modular Build system
@@ -18,9 +18,9 @@ Terminal Colonya is a Open-source Text-based colony game in the OS terminal !
     - [ ] Modular Logic system
     - [ ] TC_Graphic
 - [ ] BETA
-    - [ ]
+    - [ ] TC_API for Modding
 - [ ] REALISE
-    - [ ]
+    - [ ] Visualizer
 
 
 ## UNDER THE SCENE
