@@ -15,7 +15,7 @@ Terminal Colonya is a Open-source Text-based colony game in the OS terminal !
     - [x] Modular Command system
     - [x] Modular Build system
     - [ ] Modular Actions system
-    - [ ] Modular Logic system
+    - [X] Modular Logic system
     - [ ] TC_Graphic
 - [ ] BETA
     - [ ] TC_API for Modding
