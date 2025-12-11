@@ -24,11 +24,26 @@ namespace TC_COMMANDS
                     case null:
                         break;
                     case "create":
-                        gameContent.AvailableBuilds.TryGetValue(args[1], out var build);
-                        gameData.Builds.Add(build);
-                        Tools.Write.WriteLine($"You have create one : {build.Name}");
+                         gameContent.AvailableBuilds.TryGetValue(args[1], out var build);
+                        if (build != null)
+                        {
+                            gameData.Builds.Add(build);
+                            Tools.Write.WriteLine($"You have create one : {build.Name}");
+                        }
+                        else
+                        {
+                            Tools.Write.Color_Write(ConsoleColor.Red, $"ERROR : {args[1]} is not a build !");
+                        }
                         break;
                     case "delete":
+                        for (int i = 0; i < gameData.Builds.Count; i++)
+                        {
+                            Tools.Write.WriteLine($"{i} : {gameData.Builds[i].Name} ; {gameData.Builds[i].Level}");
+                        }
+                        Tools.Write.Color_Write(ConsoleColor.Red, "What build you delete ? : ");
+                        int r= int.Parse(Console.ReadLine());
+                        gameData.Builds.Remove(gameData.Builds[r]);
+
                         break;
                     case "list":
                         Tools.Write.WriteLine("--Your builds--");

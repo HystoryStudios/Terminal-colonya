@@ -5,7 +5,7 @@ namespace TC_CORE
     {
         string Name { get; }
         string Description { get; }
-        void Execute(GameContent gameState);
+        void Execute(GameContent gameContent);
     }
     public class ItemManager
     {

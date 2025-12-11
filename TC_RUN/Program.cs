@@ -7,9 +7,10 @@ namespace Terminal_colonya
     {
         public static void Main()
         {
-            var gs = new GameContent();
-            var cm = new CommandManager(gs);
-            var bc = new BuildingManager(gs);
+            var gc = new GameContent();
+            var cm = new CommandManager(gc);
+            var bm = new BuildingManager(gc);
+            var lm = new LogicManager(gc);
             var gd = new GameData();
             Console.WriteLine("Welcome to TC !");
 
@@ -21,19 +22,33 @@ namespace Terminal_colonya
                 Directory.GetCurrentDirectory(),
                 @"TC_BUILDS.dll"
             );
+            string logicsDllPath = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                @"TC_LOGICS.dll"
+            );
 
             cm.LoadCommandsFromAssembly(commandsDllPath);
-            bc.LoadBuildsFromAssembly(buildsDllPath);
+            bm.LoadBuildsFromAssembly(buildsDllPath);
+            lm.LoadCommandsFromAssembly(commandsDllPath);
+
+            foreach(var logic in gc.AvailableLogics.Values)
+            {
+                logic.Init(gc, gd);
+            }
 
             while (true)
             {
+                foreach (var logic in gc.AvailableLogics.Values)
+                {
+                    logic.Execute(gc, gd);
+                }
                 Tools.Write.Color_Write(ConsoleColor.Green, "\n> ");
                 var UserInput = Console.ReadLine();
                 if (UserInput == "exit")
                 {
                     break;
                 }
-                cm.ExecuteCommand(UserInput, gs, gd);
+                cm.ExecuteCommand(UserInput, gc, gd);
             }
         }
     }

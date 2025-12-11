@@ -11,11 +11,11 @@ namespace TC_CORE
     }
     public class CommandManager
     {
-        private GameContent _state;
+        private GameContent _Content;
 
-        public CommandManager(GameContent state)
+        public CommandManager(GameContent content)
         {
-            _state = state;
+            _Content = content;
         }
 
         public void LoadCommandsFromAssembly(string dllPath)
@@ -28,7 +28,7 @@ namespace TC_CORE
                     if (typeof(ICommand).IsAssignableFrom(type) && !type.IsInterface)
                     {
                         var command = (ICommand)Activator.CreateInstance(type);
-                        _state.AvailableCommands[command.Name] = command;
+                        _Content.AvailableCommands[command.Name] = command;
                         Console.WriteLine($"Commande chargée : {command.Name}");
                     }
                 }
@@ -47,7 +47,7 @@ namespace TC_CORE
             string cmdName = parts[0].Trim('/');
             string[] args = parts.Skip(1).ToArray();
 
-            if (_state.AvailableCommands.TryGetValue(cmdName, out var command))
+            if (_Content.AvailableCommands.TryGetValue(cmdName, out var command))
             {
                 command.Execute(args, state, data);
             }

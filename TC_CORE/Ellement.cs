@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TC_CORE
 {
-    public class Colon
+    public class Ellement
     {
         
     }
