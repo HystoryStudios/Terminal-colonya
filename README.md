@@ -2,19 +2,25 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET 8.0](https://img.shields.io/badge/.NET-8.0-blue)](https://dotnet.microsoft.com/download/dotnet/8.0)
-[![GitHub Stars](https://img.shields.io/github/stars/TonPseudo/TerminalColonia.svg)](https://github.com/HystoryStudios/Terminal-colonya/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/TonPseudo/TerminalColonia.svg)](https://github.com/HystoryStudios/Terminal-colonya/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/HystoryStudios/Terminal-colonya.svg)](https://github.com/HystoryStudios/Terminal-colonya/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/HystoryStudios/Terminal-colonya.svg)](https://github.com/HystoryStudios/Terminal-colonya/issues)
 
 Terminal Colonya is a Open-source Text-based colony game in the OS terminal !
 
 ## ROAD MAP
 
 - [ ] ALPHA
-    - [ ]  
+    - [ ] Colon AI system
+    - [x] DLL game content system
+    - [x] Modular Command system
+    - [x] Modular Build system
+    - [ ] Modular Actions system
+    - [X] Modular Logic system
+    - [ ] TC_Graphic
 - [ ] BETA
-    - [ ]
+    - [ ] TC_API for Modding
 - [ ] REALISE
-    - [ ]
+    - [ ] Visualizer
 
 
 ## UNDER THE SCENE
