@@ -1,4 +1,4 @@
-﻿namespace TC_CONTENTMANAGER
+﻿namespace TC_CRAFT
 {
     public class Class1
     {

@@ -41,7 +41,7 @@ namespace TC_COMMANDS
                             Tools.Write.WriteLine($"{i} : {gameData.Builds[i].Name} ; {gameData.Builds[i].Level}");
                         }
                         Tools.Write.Color_Write(ConsoleColor.Red, "What build you delete ? : ");
-                        int r= int.Parse(Console.ReadLine());
+                        int r = int.Parse(Console.ReadLine());
                         gameData.Builds.Remove(gameData.Builds[r]);
 
                         break;

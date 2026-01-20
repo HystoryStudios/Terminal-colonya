@@ -1,7 +1,7 @@
 ﻿using HOTTUI;
 using TC_CORE;
 
-namespace Terminal_colonya
+namespace TC_RUN
 {
     public class Program
     {
@@ -29,12 +29,7 @@ namespace Terminal_colonya
 
             cm.LoadCommandsFromAssembly(commandsDllPath);
             bm.LoadBuildsFromAssembly(buildsDllPath);
-            lm.LoadCommandsFromAssembly(commandsDllPath);
-
-            foreach(var logic in gc.AvailableLogics.Values)
-            {
-                logic.Init(gc, gd);
-            }
+            lm.LoadCommandsFromAssembly(logicsDllPath);
 
             while (true)
             {

@@ -7,20 +7,23 @@ using System.Threading.Tasks;
 
 namespace TC_CORE
 {
-    public interface ILogic
+    public interface ICraft
     {
-        string Name { get; }
-        string Description { get; }
-        void Execute(GameContent content, GameData gameData);
+        public string Name { get; }
+        public string Description { get; }
+        public IItem OutItem { get; }
+        public Dictionary<IItem, int> InItems { get; }
     }
-    public class LogicManager
+
+    public class CraftManager
     {
         private GameContent _Content;
 
-        public LogicManager(GameContent content)
+        public CraftManager(GameContent content)
         {
             _Content = content;
         }
+
         public void LoadCommandsFromAssembly(string dllPath)
         {
             try
@@ -28,11 +31,11 @@ namespace TC_CORE
                 var assembly = Assembly.LoadFrom(dllPath);
                 foreach (var type in assembly.GetTypes())
                 {
-                    if (typeof(ILogic).IsAssignableFrom(type) && !type.IsInterface)
+                    if (typeof(ICraft).IsAssignableFrom(type) && !type.IsInterface)
                     {
-                        var logic = (ILogic)Activator.CreateInstance(type);
-                        _Content.AvailableLogics[logic.Name] = logic;
-                        Console.WriteLine($"Logic chargée : {logic.Name}");
+                        var craft = (ICraft)Activator.CreateInstance(type);
+                        _Content.AvailableCrafts[craft.Name] = craft;
+                        Console.WriteLine($"Craft chargée : {craft.Name}");
                     }
                 }
             }

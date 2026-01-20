@@ -10,5 +10,6 @@ namespace TC_CORE
         public Dictionary<string, IZone> AvailableZones { get; } = new();
         public Dictionary<string, IAction> AvailableActions { get; } = new();
         public Dictionary<string, ILogic> AvailableLogics { get; } = new();
+        public Dictionary<string, ICraft> AvailableCrafts { get; } = new();
     }
 }

@@ -9,7 +9,6 @@ namespace TC_CORE
         string Name { get; }
         string Description { get; }
         int Level { get; }
-        void Logic(GameContent gameContent, GameData gameData);
         void Init(string[] args);
     }
     public class BuildingManager
