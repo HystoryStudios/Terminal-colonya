@@ -7,7 +7,7 @@ namespace TC_COMMANDS
     {
         public string Name => "build";
         public string Description => "All commands for build";
-        public void Execute(string[] args, GameContent gameContent, GameData gameData)
+        public void Execute(string[] args, GameContent gameContent, GameData gameData, GameVars gameVars)
         {
             if (args.Length == 0)
             {

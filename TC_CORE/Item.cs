@@ -1,5 +1,4 @@
-﻿
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace TC_CORE
 {
@@ -7,7 +6,7 @@ namespace TC_CORE
     {
         string Name { get; }
         string Description { get; }
-        void Execute(GameContent gameContent);
+        void Execute(GameContent content, GameData gameData, GameVars gameVars);
     }
     public class ItemManager
     {

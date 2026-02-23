@@ -12,6 +12,7 @@ namespace TC_RUN
             var bm = new BuildingManager(gc);
             var lm = new LogicManager(gc);
             var gd = new GameData();
+            var gv = new GameVars();
             Console.WriteLine("Welcome to TC !");
 
             string commandsDllPath = Path.Combine(
@@ -35,7 +36,7 @@ namespace TC_RUN
             {
                 foreach (var logic in gc.AvailableLogics.Values)
                 {
-                    logic.Execute(gc, gd);
+                    logic.Execute(gc, gd, gv);
                 }
                 Tools.Write.Color_Write(ConsoleColor.Green, "\n> ");
                 var UserInput = Console.ReadLine();
@@ -43,7 +44,7 @@ namespace TC_RUN
                 {
                     break;
                 }
-                cm.ExecuteCommand(UserInput, gc, gd);
+                cm.ExecuteCommand(UserInput, gc, gd, gv);
             }
         }
     }

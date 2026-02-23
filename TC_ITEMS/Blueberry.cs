@@ -10,7 +10,7 @@ namespace TC_ITEMS
     {
         public string Name => "Blueberry";
         public string Description => "a little... blue berry";
-        public void Execute(GameContent gameState)
+        public void Execute(GameContent content, GameData gameData, GameVars gameVars)
         {
 
         }

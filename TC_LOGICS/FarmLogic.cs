@@ -11,7 +11,7 @@ namespace TC_LOGICS
     {
         public string Name => "FarmLogic";
         public string Description => "the logic of Farm";
-        public void Execute(GameContent gameContent, GameData gameData)
+        public void Execute(GameContent gameContent, GameData gameData, GameVars gameVars)
         {
             
         }

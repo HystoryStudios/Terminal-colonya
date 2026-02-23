@@ -7,7 +7,7 @@ namespace TC_CORE
     {
         string Name { get; }
         string Description { get; }
-        void Execute(string[] args, GameContent gameContent, GameData gameData);
+        void Execute(string[] args, GameContent content, GameData gameData, GameVars gameVars);
     }
     public class CommandManager
     {
@@ -39,7 +39,7 @@ namespace TC_CORE
             }
         }
 
-        public void ExecuteCommand(string input, GameContent state, GameData data)
+        public void ExecuteCommand(string input, GameContent state, GameData data, GameVars vars)
         {
             if (string.IsNullOrWhiteSpace(input)) return;
 
@@ -49,7 +49,7 @@ namespace TC_CORE
 
             if (_Content.AvailableCommands.TryGetValue(cmdName, out var command))
             {
-                command.Execute(args, state, data);
+                command.Execute(args, state, data, vars);
             }
             else
             {

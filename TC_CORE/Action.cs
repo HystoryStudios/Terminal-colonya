@@ -13,7 +13,7 @@ namespace TC_CORE
         public string Description { get; }
         public string Type { get; }
         public int Priority { get; }
-        public void Logic(GameContent gameContent, GameData gameData);
+        public void Logic(GameContent gameContent, GameData gameData, GameVars vars);
     }
 
     public class ActionManager

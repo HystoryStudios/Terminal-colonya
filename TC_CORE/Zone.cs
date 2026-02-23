@@ -9,7 +9,7 @@ namespace TC_CORE
         string Name { get; }
         string Description { get; }
         int Size { get; }
-        void Execute(GameContent gameContent);
+        void Execute(GameContent content, GameData gameData, GameVars gameVars);
     }
     public class ZoneManager
     {

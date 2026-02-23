@@ -11,7 +11,7 @@ namespace TC_CORE
     {
         string Name { get; }
         string Description { get; }
-        void Execute(GameContent content, GameData gameData);
+        void Execute(GameContent content, GameData gameData, GameVars gameVars);
     }
     public class LogicManager
     {

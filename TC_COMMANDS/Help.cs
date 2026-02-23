@@ -9,7 +9,7 @@ namespace TC_COMMANDS
     {
         public string Name => "help";
         public string Description => "to introduce to TC";
-        public void Execute(string[] args, GameContent gameContent, GameData gameData)
+        public void Execute(string[] args, GameContent gameContent, GameData gameData, GameVars vars)
         {
             Tools.Write.WriteLine("Welcome to Terminal Colonya !");
             Tools.Write.WriteLine("--Available Commands--");
